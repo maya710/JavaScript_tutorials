@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>my title</title>
+	<script type="text/javascript">
+		function changeStyling()
+		{
+			var element=document.getElementsByClassName("mypara");   ///it will act like array///
+			
+			for(var x=0;x<=element.length;x++)
+			{
+				element[x].style.color="red";
+
+			}
+
+		}
+	</script>
+</head>
+<body>
+	<p id="p1" class="mypara">I m paragraph one</p>
+	<p>I m paragraph two</p>
+	<p class="mypara">I m paragraph three</p>
+	<p>I m paragraph four</p>
+	<p class="mypara">I m paragraph five</p>
+
+	<a class="mypara" href="#">This is anchor tag</a>
+	<br>
+
+	<br>
+	
+
+    <button onclick="changeStyling()">click</button>
+</body>
+</html>

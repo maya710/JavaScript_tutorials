@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		function fun()
+		{
+			var select=document.getElementById("selectbox");
+			alert(select.options[select.selectedIndex].value);
+		}
+
+	</script>
+</head>
+<body>
+	<select id="selectbox">
+		<option value="simple">simple</option>
+		<option value="complex">complex</option>
+		<option value="very complex">very complex</option>
+	</select>
+
+	<br>
+	<br>
+	<button onclick="fun()">click</button>
+
+</body>
+</html>

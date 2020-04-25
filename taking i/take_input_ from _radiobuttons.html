@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>my</title>
+
+	<script type="text/javascript">
+		function fun()
+		{
+			var rd1=document.getElementById("rd1");
+			var rd2=document.getElementById("rd2");
+			if(rd1.checked==true)
+			{
+				alert("The option is clicked "+rd1.value);
+			}
+
+			else if(rd2.checked==true)
+			{
+				alert("The option is clicked "+rd2.value);
+			}
+			else
+			{
+				alert("Plz click one the button");
+			}
+		}
+
+		
+
+
+
+
+	</script>
+</head>
+<body>
+	<input id="rd1" name="group1" type="radio" value="MALE">MALE</input>
+	 <br>
+
+	<input id="rd2"name="group1" type="radio" value="FEMALE">FEMALE</input> 
+
+	<br>
+	<br>
+	<button  onclick="fun()" id="btn">Click</button>
+
+ 
+
+</body>
+</html>

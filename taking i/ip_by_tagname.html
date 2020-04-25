@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>my title</title>
+	<script type="text/javascript">
+		function changeStyling()
+		{
+			var para=document.getElementsByTagName("p");   ///it will act like array///
+			para[0].style.fontSize =25;
+			para[1].style.color="red";
+			para[2].style.fontWeight="bold";
+			para[3].style.fontStyle="italic";
+
+
+		}
+	</script>
+</head>
+<body>
+	<p>I m paragraph one</p>
+	<p>I m paragraph two</p>
+	<p>I m paragraph three</p>
+	<p>I m paragraph four</p>
+	<p>I m paragraph five</p>
+
+	<br>
+	<br>
+
+    <button onclick="changeStyling()">click</button>
+</body>
+</html>

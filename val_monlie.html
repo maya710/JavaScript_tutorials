@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>regular ecpresion moblie validation  </title>
+	<script type="text/javascript">
+		/*
+		 \d = match any digit(equal to [0-9])
+		 \w = match any word charactr [a-z,A-Z,0-9 , & ,_ ]
+
+		 \s  = match whitespace  character (eg - spaces & tabs)
+
+		 \t = match a tab only 
+
+		*/
+
+
+		function validate()
+		{
+
+			var text=document.getElementById("text1").value;
+
+			// var regx=/[7-9]\d{9}/;  
+
+			   //-->> first digits  will be either 7,8 or 9 then other any 9 digits total 10 digits  ------------here starting and ending restriction is not there    ///
+
+			   var regx=/^[7-9]\d{9}$/;   
+			   //-->>> '^' denotes start and  '$'--denotes end of string  ///
+ 				
+ 			
+			if(regx.test(text))    
+
+			{
+				document.getElementById("lb1text").innerHTML="valid";
+
+				document.getElementById("lb1text").style.visibility="visible";
+
+				document.getElementById("lb1text").style.color="green";
+				
+			}
+			else
+			{
+				document.getElementById("lb1text").innerHTML="Invalid";
+
+				document.getElementById("lb1text").style.visibility="visible";
+
+				document.getElementById("lb1text").style.color="red";
+
+
+			}
+			
+		}
+		
+	</script>
+</head>
+<body>
+	<form >    
+		<input  id="text1" placeholder="Cellphone" type="text" /> 
+
+		<label id="lb1text" style="color: red; visibility: hidden;">Invalid </label>
+		<br>
+		<br>
+
+		<button  onclick="validate()" type="button">submit</button>
+	</form> 
+
+</body>
+</html> 

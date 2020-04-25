@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>my title</title>
+	<script type="text/javascript">
+		var a=2;     /// global variable//
+         var1=12;    ////....we can define variables enen not using var keyword  ... and it is called as global variable...////
+
+		function f()
+		{
+			var b=44;
+			document.write("<h1> VAL INSIDE FUNCTION "+b+"</h1>");
+
+		
+		document.write("<h1> VAL INSIDE  FUNCTION "+a+"</h1>");
+
+		document.write("<h1> VAL INSIDE  FUNCTION "+var1+"</h1>");
+		}
+
+
+		 ////document.write("<h1> VAL OUTSIDE FUNCTION "+b+"</h1>");    .....///scope of b is only inside function f as it is local to f ///
+
+
+		 f();
+
+		document.write("<h1> VAL OUTSIDE FUNCTION "+a+"</h1>");
+		document.write("<h1> VAL INSIDE  FUNCTION "+var1+"</h1>");
+	</script>
+</head>
+<body>
+
+</body>
+</html>

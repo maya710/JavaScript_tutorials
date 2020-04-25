@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>regular ecpresion </title>
+	<script type="text/javascript">
+		function validate()
+		{
+
+
+			//--REGULAR EXPRESSSION -- use for pattern matching .... it is treated  like object in javascript...//
+
+
+			var username=document.getElementById("uname").value; 
+			var regx=/E00/;  
+
+			 //--->  ((/E00/i))__>case sensitive///
+
+			if(regx.test(username))    
+
+			//checks that the username string contains "E00" or not at any part end start or mid   .////
+
+			{
+				alert("Valid Username");
+				
+			}
+			else
+			{
+				alert("Invalid Username");
+
+				document.getElementById("buser").style.visibility="visible";
+
+
+			}
+
+
+
+			
+		}
+		
+	</script>
+</head>
+<body>
+	<form action="message.html">    
+		<input  id="uname" placeholder="username" type="text" /><br> 
+
+		<label id="buser" style="color: red; visibility: hidden;">Invalid Username</label>
+		<br>
+
+		<button  onclick="validate()" type="button">submit</button>
+
+
+
+	</form> 
+
+</body>
+</html> 

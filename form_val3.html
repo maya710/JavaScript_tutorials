@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form Validation </title>
+	<script type="text/javascript">
+
+		//here we r going to fix length of passaword and some css styling also --> red colour for wrong password ,etc //
+
+
+		function validate()
+		{
+			var username=document.getElementById("uname"); 
+			var password =document.getElementById("pass");
+			if(username.value.trim()=="" ) 
+			{
+				// alert("blank username");
+
+				//adding red border using css//
+
+				uname.style.border="solid 3px red";
+
+				document.getElementById("buser").style.visibility="visible";
+
+				return false;
+			}
+			else if(password.value.trim()=="") 
+			{
+				 alert("blank password");
+
+				return false; 
+				
+			}
+			else if(password.value.trim().length<5) 
+			{
+				alert("password is too short");
+				return false; 
+				
+			}
+			else
+			{
+				return true;
+			}
+
+
+		}
+		
+	</script>
+</head>
+<body>
+
+		<form onsubmit=" return validate();" action="message.html">
+
+		<input  id="uname" placeholder="username" type="text" />
+
+      
+
+		<label id="buser" style="color: red; visibility: hidden;">Invalid</label>
+		<br><br>
+
+
+
+		<input  id="pass" placeholder="password" type="password"  /><br><br>
+
+		<button   "type="submit">submit</button>
+
+
+
+	</form> 
+
+</body>
+</html> 

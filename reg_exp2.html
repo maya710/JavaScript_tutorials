@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>regular ecpresion </title>
+	<script type="text/javascript">
+		function validate()
+		{
+			var username=document.getElementById("uname").value; 
+			//regx=new RegExp("E00","i");-  ->OOPS APPROACH 
+			var regx=/[sdp]imple/;   // simple,dimple,pimple  are only valids //
+
+			/*
+
+			var regx=/[a-z]00/;    //f00   -->valid  //
+
+			var regx=/[A-Z]00/;     //F00  -->valid  //
+
+			var regx=/[a-z A-Z]00/;     //HokNm   --->.  valid //
+
+			var regx=/[a-z]00/i;    //small and  capital any are  valid   ///
+
+			var regx=/[0-9]imple/;    //9imple --..   valid   //
+
+			var regx=/[0-5]a[6-9]c/;  //    2a7c   -->valid //
+
+		multple access of same elements  ---->>
+
+
+        /[a-z][a-z][a-z][a-z][a-z][a-z][a-z][a-z][a-z][a-z] / ---->>> [a-z]{10}  ....10times [a-z]
+
+			//------------------------------------------------EXCLUDING   ----->-//
+			var regx=/[^1abc]phr/; 
+
+			   //at first position we dont want 1abc other than that like 2abc are acceptable at first position along with the other  included elements  ///
+
+
+			   */
+
+			if(regx.test(username))    
+			{
+				alert("Valid Username");
+				document.getElementById("buser").style.visibility="hidden";
+				
+			}
+			else
+			{
+				//alert("Invalid Username");
+
+				document.getElementById("buser").style.visibility="visible";
+			}
+	
+		}
+		
+	</script>
+</head>
+<body>
+	<form >    
+		<input  id="uname" placeholder="username" type="text" /><br> 
+
+		<label id="buser" style="color: red; visibility: hidden;">Invalid Username</label>
+		<br>
+
+		<button  onclick="validate()" type="button">submit</button>
+
+
+
+	</form> 
+
+</body>
+</html> 

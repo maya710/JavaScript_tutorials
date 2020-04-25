@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>my title</title>
+
+	<script type="text/javascript">
+
+		/*var car={   ///  here car is an object ///
+
+
+		 car_brand:"MAYA",
+		 car_price:100000,
+		 car_model:"model_4",
+
+		  maya_Auto_Driving_car : function ()
+		{
+			document.write("<h1>THIS IS AN AUTO DRIVING CAR </h1>");
+
+		}
+		}
+
+/* ....NORMAL PROCEDURE  .....
+		var car_brand="MAYA";
+		var car_price=100000;
+		var car_model="model_4";
+
+		function maya_Auto_Driving_car()
+		{
+			document.write("<h1>THIS IS AN AUTO DRIVING CAR </h1>");
+
+		}
+
+      */ 
+
+
+      function Cars(car_brand,car_price,car_model)    //....  Here   Cars is a constructor function ...////
+      {
+      	this.car_brand=car_brand;
+      	this.car_price=car_price;
+      	this.car_model= car_model;
+
+      	this.maya_Auto_Driving_car=function()
+      	{
+      		document.write("<h1>THIS IS AN AUTO DRIVING CAR </h1>");
+      	}
+
+      }
+       var c1=new Cars("Prince",100000,"model_1");     ////instances of c1..///
+       var c2=new Cars("Rahul",180000,"model_2");
+       var c3=new Cars("Amit",170000,"model_5");
+       
+      
+       c1.maya_Auto_Driving_car();
+
+        document.write("<h1>THE CAR BRAND IS "+c1.car_brand+"</h1>");
+        document.write("<h1>THE CAR PRICE IS "+c1.car_price+"</h1>");
+        document.write("<h1>THE CAR MODEL  IS "+c1.car_model+"</h1>" +"<br>");
+
+
+
+         c2.maya_Auto_Driving_car();
+
+
+        document.write("<h1>THE CAR BRAND IS "+c2.car_brand+"</h1>");
+        document.write("<h1>THE CAR PRICE IS "+c2.car_price+"</h1>");
+        document.write("<h1>THE CAR MODEL  IS "+c2.car_model+"</h1>"+"<br>");
+
+
+        c3.maya_Auto_Driving_car();
+
+
+        document.write("<h1>THE CAR BRAND IS "+c3.car_brand+"</h1>");
+        document.write("<h1>THE CAR PRICE IS "+c3.car_price+"</h1>");
+        document.write("<h1>THE CAR MODEL  IS "+c3.car_model+"</h1>"+"<br>");
+
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Animation Fade In & Fade Out </title>
+	<script type="text/javascript">
+		var opacity=0;
+		var intervalID=0;
+
+		function fadeOut()
+		{
+			intervalID=setInterval(hide,20);
+
+		}
+		function hide()
+		{
+			var img=document.getElementById("img1");
+			opacity=Number(window.getComputedStyle(img).getPropertyValue("opacity"));
+
+			if(opacity>0)
+			{
+				opacity=opacity-0.1;
+				img.style.opacity=opacity;
+			}
+			else
+			{
+				clearInterval(intervalID);
+			}
+		}
+
+		function show()
+		{
+			var img=document.getElementById("img1");
+			opacity=Number(window.getComputedStyle(img).getPropertyValue("opacity"));
+
+			if(opacity<1)
+			{
+				opacity=opacity+0.1;
+				img.style.opacity=opacity;
+			}
+			else 
+			{
+				clearInterval(intervalID);
+			}
+
+		}
+
+		function fadeIn()
+		{
+			intervalID=setInterval(show,20);
+
+
+		}
+		
+
+
+	</script>
+</head>
+<body>
+	<button onclick="fadeout()" id="btAdd">Fade Out</button>
+	<br>
+	<img style="opacity: 0.4;" id="img1" src="img/maya9.png" width="250px">
+	<br>
+	<button onclick="fadeIn()" id="btnStop">Fade In</button>
+
+</body>
+</html>
